@@ -22,3 +22,5 @@ npm run start
 ```bash
 docker compose up --build
 ```
+
+If you deploy on a server, make sure the `caddy/` folder is present (it contains `caddy/Caddyfile`). We mount the **directory** into `/etc/caddy` to avoid file-vs-directory bind mount errors.

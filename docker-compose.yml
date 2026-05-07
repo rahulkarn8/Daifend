@@ -20,7 +20,8 @@ services:
       DOMAIN: ${DOMAIN:-localhost}
       ACME_EMAIL: ${ACME_EMAIL:-}
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      # Mount directory to avoid file/dir mismatch on hosts
+      - ./caddy:/etc/caddy:ro
       - caddy_data:/data
       - caddy_config:/config
     restart: unless-stopped
