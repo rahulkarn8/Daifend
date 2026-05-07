@@ -1,0 +1,42 @@
+<svg width="720" height="200" viewBox="0 0 720 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Punch-out for the "minimal break" so background can show through -->
+    <mask id="daifend_cut" maskUnits="userSpaceOnUse" x="0" y="0" width="720" height="200">
+      <rect width="720" height="200" fill="white"/>
+      <!-- remove a short segment at the D's midline -->
+      <rect x="120" y="86" width="26" height="10" rx="5" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Symbol -->
+  <g transform="translate(40,35)" mask="url(#daifend_cut)">
+    <!-- Outer D -->
+    <path d="M20 10V100" stroke="#F5F7FA" stroke-width="8" stroke-linecap="round"/>
+    <path d="M20 10C75 10 100 35 100 55C100 75 75 100 20 100" stroke="#F5F7FA" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- Inner semantic square -->
+    <rect x="42" y="42" width="12" height="12" rx="2" fill="#9FB4FF"/>
+  </g>
+
+  <!-- Wordmark -->
+  <g fill="#F5F7FA">
+    <text x="180" y="82"
+      font-family="Inter, Helvetica, Arial, sans-serif"
+      font-size="56"
+      letter-spacing="10"
+      font-weight="300">
+      DAIFEND
+    </text>
+  </g>
+
+  <!-- Tagline -->
+  <text x="182" y="136"
+    font-family="Inter, Helvetica, Arial, sans-serif"
+    font-size="24"
+    letter-spacing="4.5"
+    fill="#9CA3AF"
+    font-weight="300">
+    SECURING THE AI RUNTIME
+  </text>
+</svg>
+
