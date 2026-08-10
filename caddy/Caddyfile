@@ -1,4 +1,4 @@
-{$DOMAIN} {
+daifend.ai, www.daifend.ai {
   encode zstd gzip
 
   header {
