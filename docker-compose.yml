@@ -17,8 +17,8 @@ services:
       - "80:80"
       - "443:443"
     environment:
-      DOMAIN: ${DOMAIN:-localhost}
-      ACME_EMAIL: ${ACME_EMAIL:-}
+      DOMAIN: "daifend.ai, www.daifend.ai"
+      ACME_EMAIL: "rahul@daifend.ai"
     volumes:
       # Mount directory to avoid file/dir mismatch on hosts
       - ./caddy:/etc/caddy:ro
