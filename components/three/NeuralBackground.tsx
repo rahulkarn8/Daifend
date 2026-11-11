@@ -4,7 +4,6 @@ import * as React from "react";
 import * as THREE from "three";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { EffectComposer, Bloom } from "@react-three/postprocessing";
-import { Environment } from "@react-three/drei";
 
 type Node = {
   p: THREE.Vector3;
@@ -191,7 +190,6 @@ export function NeuralBackground() {
         <ambientLight intensity={0.6} />
         <directionalLight position={[6, 6, 6]} intensity={0.85} />
         <NeuralField density={160} />
-        <Environment preset="night" />
         <EffectComposer>
           <Bloom intensity={0.8} luminanceThreshold={0.35} luminanceSmoothing={0.7} />
         </EffectComposer>

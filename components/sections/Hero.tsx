@@ -1,12 +1,26 @@
 "use client";
 
 import * as React from "react";
+import dynamic from "next/dynamic";
 import { motion, useMotionValue, useSpring, useTransform, type MotionStyle } from "framer-motion";
 import { ArrowRight, Shield, Radar, Sparkles } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/Button";
-import { NeuralBackground } from "@/components/three/NeuralBackground";
 import { cn } from "@/lib/cn";
+
+// three.js background streams in after first paint; static gradients show meanwhile
+const NeuralBackground = dynamic(
+  () => import("@/components/three/NeuralBackground").then((m) => m.NeuralBackground),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 daifend-grid opacity-70" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(41,240,255,0.16),transparent_55%),radial-gradient(circle_at_75%_65%,rgba(177,76,255,0.14),transparent_50%),radial-gradient(circle_at_20%_75%,rgba(76,125,255,0.12),transparent_55%)]" />
+      </div>
+    ),
+  },
+);
 
 function Metric({
   label,
