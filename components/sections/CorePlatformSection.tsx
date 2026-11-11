@@ -69,7 +69,7 @@ export function CorePlatformSection() {
     <section className="py-20 md:py-28">
       <Container>
         <SectionHeader
-          eyebrow="Core platform"
+          eyebrow="Platform roadmap"
           title={
             <>
               An AI-native security stack built for{" "}
@@ -78,7 +78,7 @@ export function CorePlatformSection() {
               </span>
             </>
           }
-          description="Deception, memory integrity, self-healing runtime, supply chain trust scoring, cognitive defense, and autonomous threat intelligence—designed to work together as one immune system."
+          description="Our platform vision, in active development: deception, memory integrity, self-healing runtime, supply chain trust scoring, cognitive defense, and autonomous threat intelligence — one immune system, anchored by the Action Firewall available today."
         />
 
         <div className="mt-10 grid gap-4 md:grid-cols-2 lg:grid-cols-3">

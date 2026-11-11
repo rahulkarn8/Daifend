@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { PageHero } from "@/components/sections/PageHero";
+import { ActionFirewallSection } from "@/components/sections/ActionFirewallSection";
 import { CorePlatformSection } from "@/components/sections/CorePlatformSection";
 import { ArchitectureSection } from "@/components/sections/ArchitectureSection";
 import { DemoSimulationSection } from "@/components/sections/DemoSimulationSection";
@@ -8,7 +9,7 @@ import { CinematicCTASection } from "@/components/sections/CinematicCTASection";
 export const metadata: Metadata = {
   title: "Platform",
   description:
-    "AI-native cybersecurity platform for autonomous AI threats: deception, memory poisoning detection, self-healing runtime, and supply chain trust scoring.",
+    "The Daifend Action Firewall — a deterministic, fail-closed proxy for AI agent tool calls with a tamper-evident audit trail — plus our AI-native platform roadmap.",
 };
 
 export default function PlatformPage() {
@@ -24,8 +25,9 @@ export default function PlatformPage() {
             </span>
           </>
         }
-        description="Daifend defends AI memory, agents, and infrastructure by combining deception warfare, continuous trust scoring, cognitive threat detection, and self-healing containment workflows."
+        description="Daifend governs every action your AI agents take — starting with the Action Firewall, shipping today — and extends to deception warfare, trust scoring, cognitive threat detection, and self-healing containment."
       />
+      <ActionFirewallSection />
       <CorePlatformSection />
       <ArchitectureSection />
       <DemoSimulationSection />

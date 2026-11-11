@@ -45,7 +45,11 @@ export function ThreatMap({
   className?: string;
   density?: number;
 }) {
-  const [seed] = React.useState(() => Math.floor(Math.random() * 1_000_000));
+  // fixed SSR seed; re-randomized after mount so server and client markup match
+  const [seed, setSeed] = React.useState(123456);
+  React.useEffect(() => {
+    setSeed(Math.floor(Math.random() * 1_000_000));
+  }, []);
   const [active, setActive] = React.useState<string | null>(null);
 
   const { nodes, attacks } = React.useMemo(() => {

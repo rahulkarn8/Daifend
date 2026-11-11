@@ -18,6 +18,10 @@ export function AttackTicker({ className }: { className?: string }) {
     return doubled;
   }, []);
 
+  // timestamps are set after mount so server and client HTML match (avoids hydration bailout)
+  const [now, setNow] = React.useState<number | null>(null);
+  React.useEffect(() => setNow(Date.now()), []);
+
   return (
     <div
       className={cn(
@@ -45,7 +49,9 @@ export function AttackTicker({ className }: { className?: string }) {
             <span className="text-white/70">{it.text}</span>
             <span className="text-white/25">—</span>
             <span className="font-mono text-white/45">
-              {new Date(Date.now() - (idx % 5) * 1000 * 7).toISOString().slice(11, 19)}Z
+              {now === null
+                ? "--:--:--Z"
+                : `${new Date(now - (idx % 5) * 1000 * 7).toISOString().slice(11, 19)}Z`}
             </span>
           </div>
         ))}

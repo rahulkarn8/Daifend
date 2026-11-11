@@ -84,7 +84,8 @@ export function Hero() {
           <div className="w-full">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.7, ease: [0.21, 0.9, 0.2, 1] }}
               className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/6 px-4 py-2 backdrop-blur-2xl"
             >
@@ -99,7 +100,8 @@ export function Hero() {
               <div>
                 <motion.h1
                   initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: 0.08, duration: 0.8, ease: [0.21, 0.9, 0.2, 1] }}
                   className="text-balance text-[38px] leading-[1.04] md:text-[56px] lg:text-[66px] font-semibold tracking-[-0.04em] text-white"
                 >
@@ -111,12 +113,14 @@ export function Hero() {
 
                 <motion.p
                   initial={{ opacity: 0, y: 18 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ delay: 0.14, duration: 0.8, ease: [0.21, 0.9, 0.2, 1] }}
                   className="mt-6 max-w-2xl text-pretty text-[15px] md:text-lg leading-7 text-white/70"
                 >
                   Daifend secures AI memory, autonomous agents, and enterprise AI systems against
-                  manipulation and emerging AI-native threats.
+                  manipulation and emerging AI-native threats. Our Action Firewall — shipping today —
+                  puts a deterministic, fail-closed gate on every tool call your agents make.
                 </motion.p>
 
                 <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -129,16 +133,17 @@ export function Hero() {
                 </div>
 
                 <div className="mt-10 grid grid-cols-2 gap-3 md:grid-cols-4">
-                  <Metric label="AI attacks blocked" value="87,412" accent="cyan" />
-                  <Metric label="Autonomous threats analyzed" value="1.9M" accent="violet" />
-                  <Metric label="Self-healing actions executed" value="403,118" accent="lime" />
-                  <Metric label="Global threat signals" value="12.4B" accent="blue" />
+                  <Metric label="Agent tool calls governed" value="100%" accent="cyan" />
+                  <Metric label="LLMs in decision path" value="0" accent="violet" />
+                  <Metric label="Policy decision latency" value="<1" suffix="ms" accent="lime" />
+                  <Metric label="Audit integrity" value="SHA-256" accent="blue" />
                 </div>
               </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ delay: 0.18, duration: 0.8, ease: [0.21, 0.9, 0.2, 1] }}
                 className="relative"
               >
